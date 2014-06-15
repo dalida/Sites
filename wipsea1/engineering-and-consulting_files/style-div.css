@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+body,html { 
+margin:0; 
+padding:0; 
+height:100%;
+width:100%;
+background:#fff;
+font-family: helvetica, Verdana, Geneva, sans-serif;
+} 
+
+#menu{
+	position:absolute;
+	left:50%;
+	margin-left:-445px;
+	top:100px;	
+}
+
+.bouton-encarts{
+	text-align:center;
+	padding:10px 25px;
+}
+
+
+dd{
+	text-align:justify;
+	margin:60px 110px;
+	width:430px;
+}
+
+.fond-cadreorange{
+	background-image:url(images/cadreorange/cadreorange_03.png);
+	background-repeat:repeat-y;
+}
+
+
+
+
+
+.fond-case1{
+	background-image:url(images/bandeaux/visuel1.jpg);
+	background-repeat:no-repeat;
+	height:368px;
+	width:650px;
+	border-bottom:1px solid #fff;
+	
+}
+.fond-case2{
+	background-image:url(images/bandeaux/visuel2.jpg);
+	background-repeat:no-repeat;
+	height:368px;
+	width:650px;
+	border-bottom:1px solid #fff;
+}
+.fond-case3{
+	background-image:url(images/bandeaux/visuel3.jpg);
+	background-repeat:no-repeat;
+	height:368px;
+	width:650px;
+	border-bottom:1px solid #fff;
+}
+.fond-case4{
+	background-image:url(images/bandeaux/visuel4.jpg);
+	background-repeat:no-repeat;
+	height:368px;
+	width:650px;
+	border-bottom:1px solid #fff;
+}
+.fond-case5{
+	background-image:url(images/bandeaux/visuel5.jpg);
+	background-repeat:no-repeat;
+	height:368px;
+	width:650px;
+	border-bottom:1px solid #fff;
+}
+.fond-case6{
+	background-image:url(images/bandeaux/visuel6.jpg);
+	background-repeat:no-repeat;
+	height:368px;
+	width:650px;
+	border-bottom:1px solid #fff;
+}
