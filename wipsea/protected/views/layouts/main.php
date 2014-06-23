@@ -40,10 +40,10 @@ $(document).ready(function() {
 	</div><!-- header -->
 
 	<div id="mainmenu">
+<!--@TODO LM restrict admin pages -->
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
-				//array('label'=>'Images', 'url'=>array('/site/page', 'view'=>'images')),
 				array('label'=>'Images', 'url'=>array('/image', 'view'=>'index')),
 				array('label'=>'Wildlife', 'url'=>array('/site/page', 'view'=>'wildlife')),
 				array('label'=>'Map', 'url'=>array('/site/page', 'view'=>'map')),

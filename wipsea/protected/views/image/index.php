@@ -5,6 +5,8 @@ $this->pageTitle=Yii::app()->name . ' - Images';
 $this->breadcrumbs=array(
 	'Images',
 );
+
+$models=$dataProvider->getData();
 ?>
 
 <h1>Images</h1>
@@ -18,7 +20,9 @@ $this->breadcrumbs=array(
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_thumbView',
-)); ?>
+));
+
+ ?>
     </div>
 
   </div>
@@ -28,32 +32,27 @@ $this->breadcrumbs=array(
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
     <!-- end .sidebar1 --></div>
+
   <div class="imagesTabs">
     <div id="TabbedPanels1" class="TabbedPanels">
-      <ul class="TabbedPanelsTabGroup">
-        <li class="TabbedPanelsTab" tabindex="0">Processed</li>
-        <li class="TabbedPanelsTab" tabindex="0">Not Processed</li>
-        <li class="TabbedPanelsTab" tabindex="0">Image 1</li>
-</ul>
-      <div class="TabbedPanelsContentGroup">
-        <div class="TabbedPanelsContent">
-        </div>
-        <div class="TabbedPanelsContent">
-        </div>
-
-        <div class="TabbedPanelsContent">
-          <p><img src="images/bandeaux/visuel3.jpg" width="100%" height="330" align="middle" /></p>
-        </div>
-      </div>
-    </div>
+<?php $this->widget('zii.widgets.jui.CJuiTabs',array(
+    'tabs'=>array(
+        'Image 1'=>array('content'=>Chtml::image($dataProvider->getData()[0]->img_path, null, array('class'=>'imagesTab'))
+        ),
+        'Processed'=>'Content for tab 1',
+        'Processed'=>array('content'=>'Content for tab 2', 'id'=>'tab2'),
+        'Not Processed'=>array('content'=>'Content for tab 3', 'id'=>'tab3'),
+    ),
+    // additional javascript options for the tabs plugin
+    'options'=>array(
+        'collapsible'=>true,
+    ),
+));
+?>
   </div>
+</div>
+
   <div class="sidebar2">
     <div id="title_image">
       <h4>Image 1    </h4>
@@ -62,23 +61,23 @@ $this->breadcrumbs=array(
       <table width="88%" align="center">
         <tr>
           <th scope="row"><div align="right">Image:</div></th>
-          <td><div align="center">Image 1</div></td>
+    <td><div align="left"><?php echo $models[0]->name ?></div></td>
         </tr>
         <tr>
           <th scope="row"><div align="right">Longitude:</div></th>
-          <td><div align="center">48.35954</div></td>
+    <td><div align="left"><?php echo $models[0]->longitude ?></div></td>
         </tr>
         <tr>
           <th scope="row"><div align="right">Latitude:</div></th>
-          <td><div align="center">-4.570347</div></td>
+          <td><div align="left"><?php echo $models[0]->latitude ?></div></td>
         </tr>
         <tr>
           <th scope="row"><div align="right">Altitude:</div></th>
-          <td><div align="center">3.568475</div></td>
+          <td><div align="left"><?php echo $models[0]->altitude ?></div></td>
         </tr>
         <tr>
           <th scope="row"><div align="right">Wildlife:</div></th>
-          <td align="center">
+          <td align="left">
             <select class="TabbedPanelsTabGroup">
               <option value="baleine">Baleine</option>
               <option value="dauphin">Dauphin</option>
@@ -90,7 +89,7 @@ $this->breadcrumbs=array(
         </tr>
         <tr>
           <th scope="row"><div align="right">Processed:</div></th>
-          <td><div align="center">Yes</div></td>
+          <td><div align="left">Yes</div></td>
         </tr>
       </table>
        <p>&nbsp;</p>

@@ -87,19 +87,17 @@ class ImageController extends Controller
             if($uploadedFile !== null)
             {
                 CVarDumper::dump($_FILES);
-                $fileName = $datetime."-".$uploadedFile->getName();
+                $fileName = date('YmdHis')."-".$uploadedFile->getName();
                 $model->name=$fileName;
                 $model->image=$fileName;
                 $model->type=self::IMAGE_TYPE;
                 $model->img_path = 'images/upload/'.$fileName;
-//                $model->img_path = Yii::app()->basePath.self::IMAGE_PATH.$fileName;
             }
 
 			if($model->save())
             {
                 echo Yii::app()->basePath.self::IMAGE_PATH.$fileName;
                 $uploadedFile->saveAs(YiiBase::getPathOfAlias('webroot').self::IMAGE_PATH.$fileName);
-                //$uploadedFile->saveAs(Yii::app()->baseUrl.self::IMAGE_PATH.$fileName);
                 $this->redirect(array('view','id'=>$model->id));
             }
 		}
