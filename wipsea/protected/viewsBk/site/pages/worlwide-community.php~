@@ -1,0 +1,10 @@
+<?php
+/* @var $this SiteController */
+
+$this->pageTitle=Yii::app()->name . ' - Worldwide Community';
+$this->breadcrumbs=array(
+	'Worldwide Community',
+);
+?>
+
+<h1>Worldwide Community Community</h1>

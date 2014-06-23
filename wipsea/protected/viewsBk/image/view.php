@@ -12,7 +12,8 @@ $this->menu=array(
 	array('label'=>'Create Image', 'url'=>array('create')),
 	array('label'=>'Update Image', 'url'=>array('update', 'id'=>$model->id)),
 	array('label'=>'Delete Image', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Image', 'url'=>array('admin')),
+	array('label'=>'Manage Image', 'url'=>array('demo')),
+//    array('label'=>'image', 'type'=>'raw', 'value'=>CHtml::image(Yii:app()->baseUrl.'/images/'.$model->image),),
 );
 ?>
 

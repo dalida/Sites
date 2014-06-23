@@ -10,7 +10,6 @@
  * @property string $latitude
  * @property string $altitude
  * @property string $img_path
- * @property string $img_thumb_path
  * @property integer $type
  * @property integer $processed
  * @property integer $valid
@@ -38,15 +37,14 @@ class Image extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, img_path, img_thumb_path, type, created_by, created, last_update', 'required'),
-			array('type, processed, valid', 'numerical', 'integerOnly'=>true),
+			array('name, img_path, created_by, created, last_update', 'required'),
+			array('processed, valid', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>60),
 			array('longitude, latitude, altitude', 'length', 'max'=>50),
-			array('img_path, img_thumb_path', 'length', 'max'=>255),
-			array('created_by', 'length', 'max'=>128),
+			array('type, created_by', 'length', 'max'=>128),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, longitude, latitude, altitude, img_path, img_thumb_path, type, processed, valid, created_by, created, last_update', 'safe', 'on'=>'search'),
+			array('id, name, longitude, latitude, altitude, img_path, type, processed, valid, created_by, created, last_update', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -73,7 +71,6 @@ class Image extends CActiveRecord
 			'latitude' => 'Latitude',
 			'altitude' => 'Altitude',
 			'img_path' => 'Img Path',
-			'img_thumb_path' => 'Img Thumb Path',
 			'type' => 'Type',
 			'processed' => 'Processed',
 			'valid' => 'Valid',
@@ -107,7 +104,6 @@ class Image extends CActiveRecord
 		$criteria->compare('latitude',$this->latitude,true);
 		$criteria->compare('altitude',$this->altitude,true);
 		$criteria->compare('img_path',$this->img_path,true);
-		$criteria->compare('img_thumb_path',$this->img_thumb_path,true);
 		$criteria->compare('type',$this->type);
 		$criteria->compare('processed',$this->processed);
 		$criteria->compare('valid',$this->valid);

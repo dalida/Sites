@@ -4,7 +4,6 @@
  * This is the model class for table "image_type".
  *
  * The followings are the available columns in table 'image_type':
- * @property integer $id
  * @property string $type
  */
 class ImageType extends CActiveRecord
@@ -25,12 +24,11 @@ class ImageType extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, type', 'required'),
-			array('id', 'numerical', 'integerOnly'=>true),
-			array('type', 'length', 'max'=>10),
+			array('type', 'required'),
+			array('type', 'length', 'max'=>128),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, type', 'safe', 'on'=>'search'),
+			array('type', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -51,7 +49,6 @@ class ImageType extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
 			'type' => 'Type',
 		);
 	}
@@ -74,7 +71,6 @@ class ImageType extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
 		$criteria->compare('type',$this->type,true);
 
 		return new CActiveDataProvider($this, array(

@@ -7,9 +7,9 @@ class ImageController extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/column2';
-//    const IMAGE_PATH = '/../images/upload/';
+
     const IMAGE_PATH = '/images/upload/';
-    const IMAGE_THUMB_PATH = '/../images/upload/thumbs/';
+    const IMAGE_TYPE = 'background';
 
 	/**
 	 * @return array action filters
@@ -31,7 +31,7 @@ class ImageController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+                'actions'=>array('index','view','list'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -72,6 +72,7 @@ class ImageController extends Controller
 
 		if(isset($_POST['Image']))
 		{
+            echo "test2";
 			$model->attributes=$_POST['Image'];
             date_default_timezone_set('America/New_York');
             $datetime = date('Y-m-d-H-i-s');
@@ -80,23 +81,25 @@ class ImageController extends Controller
             $model->created_by = Yii::app()->user->id;
 
             // upload
-            $uploadedFile = CUploadedFile::getInstance($model,'image');
             CVarDumper::dump($_POST);
             CVarDumper::dump($model->attributes);
+            $uploadedFile = CUploadedFile::getInstance($model,'image');
             if($uploadedFile !== null)
             {
-                echo "*******";
                 CVarDumper::dump($_FILES);
                 $fileName = $datetime."-".$uploadedFile->getName();
+                $model->name=$fileName;
                 $model->image=$fileName;
-                $model->img_path = Yii::app()->basePath.self::IMAGE_PATH.$fileName;
-                $model->img_thumb_path = self::IMAGE_THUMB_PATH;
+                $model->type=self::IMAGE_TYPE;
+                $model->img_path = 'images/upload/'.$fileName;
+//                $model->img_path = Yii::app()->basePath.self::IMAGE_PATH.$fileName;
             }
 
 			if($model->save())
             {
-                //$uploadedFile->saveAs(Yii::app()->basePath.self::IMAGE_PATH.$fileName);
-                $uploadedFile->saveAs(Yii::app()->baseUrl.self::IMAGE_PATH.$fileName);
+                echo Yii::app()->basePath.self::IMAGE_PATH.$fileName;
+                $uploadedFile->saveAs(YiiBase::getPathOfAlias('webroot').self::IMAGE_PATH.$fileName);
+                //$uploadedFile->saveAs(Yii::app()->baseUrl.self::IMAGE_PATH.$fileName);
                 $this->redirect(array('view','id'=>$model->id));
             }
 		}
@@ -107,6 +110,7 @@ class ImageController extends Controller
 	}
 
 	/**
+     * @TODO LM update with image attributes
 	 * Updates a particular model.
 	 * If update is successful, the browser will be redirected to the 'view' page.
 	 * @param integer $id the ID of the model to be updated
@@ -156,6 +160,18 @@ class ImageController extends Controller
 	}
 
 	/**
+	 * List images
+	 */
+	public function actionList()
+	{
+		$dataProvider=new CActiveDataProvider('Image');
+		$this->render('list',array(
+			'dataProvider'=>$dataProvider,
+		));
+	}
+
+
+	/**
 	 * Manages all models.
 	 */
 	public function actionAdmin()
@@ -169,6 +185,12 @@ class ImageController extends Controller
 			'model'=>$model,
 		));
 	}
+
+
+    /**
+     * @TODO LM add a subclass of CConsoleCommand under commands/shell
+     * Executes the command line script to process image detection
+     */
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.

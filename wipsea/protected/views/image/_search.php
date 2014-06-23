@@ -42,11 +42,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'img_thumb_path'); ?>
-		<?php echo $form->textField($model,'img_thumb_path',array('size'=>60,'maxlength'=>255)); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'type'); ?>
 		<?php echo $form->textField($model,'type'); ?>
 	</div>

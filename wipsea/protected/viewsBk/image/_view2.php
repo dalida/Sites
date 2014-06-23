@@ -25,12 +25,20 @@
 	<?php echo CHtml::encode($data->altitude); ?>
 	<br />
 
+    <b><?php //            CVarDumper::dump($data); ?>
+    </b>
+	<?php
+echo CHtml::encode($data->getAttributeLabel('image')); ?>:</b>
+<?php
+//echo CHtml::image(Yii::app()->basePath.$data->img_path);
+CVarDumper::dump( YiiBase::getPathOfAlias('webroot'));
+CVarDumper::dump(Yii::app()->basePath.$data->img_path));
+// echo CHtml::image(Yii:app()->request->baseUrl.'/images/upload/'.$data->image,"image",array("width"=>200))
+ ?></b>
+    <br>
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('img_path')); ?>:</b>
 	<?php echo CHtml::encode($data->img_path); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('img_thumb_path')); ?>:</b>
-	<?php echo CHtml::encode($data->img_thumb_path); ?>
 	<br />
 
 	<?php /*

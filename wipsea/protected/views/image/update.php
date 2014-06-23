@@ -9,7 +9,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Image', 'url'=>array('index')),
+	array('label'=>'List Image', 'url'=>array('list')),
 	array('label'=>'Create Image', 'url'=>array('create')),
 	array('label'=>'View Image', 'url'=>array('view', 'id'=>$model->id)),
 	array('label'=>'Manage Image', 'url'=>array('admin')),

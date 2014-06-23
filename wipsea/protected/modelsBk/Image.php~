@@ -20,6 +20,8 @@
  */
 class Image extends CActiveRecord
 {
+    public $image;
+
 	/**
 	 * @return string the associated database table name
 	 */

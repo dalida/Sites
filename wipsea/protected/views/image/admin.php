@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Image', 'url'=>array('index')),
+	array('label'=>'List Image', 'url'=>array('list')),
 	array('label'=>'Create Image', 'url'=>array('create')),
 );
 
@@ -51,15 +51,6 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'latitude',
 		'altitude',
 		'img_path',
-		/*
-		'img_thumb_path',
-		'type',
-		'processed',
-		'valid',
-		'created_by',
-		'created',
-		'last_update',
-		*/
 		array(
 			'class'=>'CButtonColumn',
 		),

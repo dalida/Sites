@@ -1882,3 +1882,593 @@ Stack trace:
 #11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
 #12 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
 REQUEST_URI=/~lstilo/wipsea/index.php?r=image/create
+2014/06/16 15:34:01 [error] [exception.CDbException] SQLSTATE[HY000] [2002] No such file or directory
+2014/06/16 15:34:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection.' in /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/db/CDbConnection.php:388
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/db/ar/CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/db/ar/CActiveRecord.php(1595): CActiveRecord->getCommandBuilder()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CBaseListView.php(111): CDataProvider->getData()
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(147): CListView->init()
+#14 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#15 /Users/lstilo/Sites0/wipsea/protected/views/image/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#16 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require('/Users/lstilo/S...')
+#17 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/lstilo/S...', Array, true)
+#18 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(869): CBaseController->renderFile('/Users/lstilo/S...', Array, true)
+#19 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#20 /Users/lstilo/Sites0/wipsea/protected/controllers/ImageController.php(155): CController->render('index', Array)
+#21 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionIndex()
+#22 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#23 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#24 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#25 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#26 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#27 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#28 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#29 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('')
+#31 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('image')
+#32 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#33 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#34 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image
+---
+2014/06/23 03:49:05 [error] [exception.CDbException] SQLSTATE[HY000] [2002] No such file or directory
+2014/06/23 03:49:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection.' in /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/db/CDbConnection.php:388
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/db/ar/CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/db/ar/CActiveRecord.php(1595): CActiveRecord->getCommandBuilder()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CBaseListView.php(111): CDataProvider->getData()
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(147): CListView->init()
+#14 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#15 /Users/lstilo/Sites0/wipsea/protected/views/image/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#16 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require('/Users/lstilo/S...')
+#17 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/lstilo/S...', Array, true)
+#18 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(869): CBaseController->renderFile('/Users/lstilo/S...', Array, true)
+#19 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#20 /Users/lstilo/Sites0/wipsea/protected/controllers/ImageController.php(155): CController->render('index', Array)
+#21 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionIndex()
+#22 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#23 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#24 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#25 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#26 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#27 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#28 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#29 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('')
+#31 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('image')
+#32 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#33 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#34 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image
+---
+2014/06/23 06:11:50 [error] [php] include(ExceptionClass.php): failed to open stream: No such file or directory (/Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/YiiBase.php:427)
+Stack trace:
+#0 /Users/lstilo/Sites0/wipsea/protected/components/ImageHelper.php(32): spl_autoload_call()
+#1 /Users/lstilo/Sites0/wipsea/protected/controllers/ImageController.php(153): thumb()
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionIndex()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): ImageController->runAction()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): ImageController->filterAccessControl()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): ImageController->runActionWithFilters()
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): ImageController->run()
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image
+2014/06/23 06:17:19 [error] [php] include(ExceptionClass.php): failed to open stream: No such file or directory (/Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/YiiBase.php:427)
+Stack trace:
+#0 /Users/lstilo/Sites0/wipsea/protected/components/ImageHelper.php(32): spl_autoload_call()
+#1 /Users/lstilo/Sites0/wipsea/protected/controllers/ImageController.php(153): thumb()
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionIndex()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): ImageController->runAction()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): ImageController->filterAccessControl()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): ImageController->runActionWithFilters()
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): ImageController->run()
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image
+2014/06/23 06:23:17 [error] [php] include(ExceptionClass.php): failed to open stream: No such file or directory (/Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/YiiBase.php:427)
+Stack trace:
+#0 /Users/lstilo/Sites0/wipsea/protected/components/ImageHelper.php(32): spl_autoload_call()
+#1 /Users/lstilo/Sites0/wipsea/protected/controllers/ImageController.php(153): thumb()
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionIndex()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): ImageController->runAction()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): ImageController->filterAccessControl()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): ImageController->runActionWithFilters()
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): ImageController->run()
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image
+2014/06/23 06:23:47 [error] [exception.Exception] exception 'Exception' in /Users/lstilo/Sites0/wipsea/protected/components/ImageHelper.php:33
+Stack trace:
+#0 /Users/lstilo/Sites0/wipsea/protected/controllers/ImageController.php(153): ImageHelper::thumb(40, 40, '/Users/lstilo/S...', NULL, Array)
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionIndex()
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('')
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('image')
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image
+---
+2014/06/23 06:25:31 [error] [exception.Exception] exception 'Exception' in /Users/lstilo/Sites0/wipsea/protected/components/ImageHelper.php:33
+Stack trace:
+#0 /Users/lstilo/Sites0/wipsea/protected/controllers/ImageController.php(153): ImageHelper::thumb(40, 40, '/Users/lstilo/S...', Array)
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionIndex()
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('')
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('image')
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image
+---
+2014/06/23 07:36:17 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('list')
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('image/list')
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image/list
+---
+2014/06/23 08:11:59 [error] [exception.CException] exception 'CException' with message 'Property "Image.img_thumb_path" is not defined.' in /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/db/ar/CActiveRecord.php(145): CComponent->__get('img_thumb_path')
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/validators/CRequiredValidator.php(58): CActiveRecord->__get('img_thumb_path')
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/validators/CValidator.php(213): CRequiredValidator->validateAttribute(Object(Image), 'img_thumb_path')
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CModel.php(159): CValidator->validate(Object(Image), NULL)
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/db/ar/CActiveRecord.php(805): CModel->validate(NULL)
+#5 /Users/lstilo/Sites0/wipsea/protected/controllers/ImageController.php(100): CActiveRecord->save()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionCreate()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#14 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('create')
+#16 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('image/create')
+#17 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image/create
+HTTP_REFERER=http://localhost/~lstilo/wipsea/index.php?r=image/create
+---
+2014/06/23 08:20:25 [error] [exception.CException] exception 'CException' with message 'Property "Image.image" is not defined.' in /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CComponent.php:173
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/db/ar/CActiveRecord.php(161): CComponent->__set('image', '2014-06-23-08-2...')
+#1 /Users/lstilo/Sites0/wipsea/protected/controllers/ImageController.php(93): CActiveRecord->__set('image', '2014-06-23-08-2...')
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionCreate()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('create')
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('image/create')
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image/create
+HTTP_REFERER=http://localhost/~lstilo/wipsea/index.php?r=image/create
+---
+2014/06/23 08:21:07 [error] [exception.CException] exception 'CException' with message 'Property "Image.image" is not defined.' in /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CComponent.php:173
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/db/ar/CActiveRecord.php(161): CComponent->__set('image', '2014-06-23-08-2...')
+#1 /Users/lstilo/Sites0/wipsea/protected/controllers/ImageController.php(93): CActiveRecord->__set('image', '2014-06-23-08-2...')
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionCreate()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('create')
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('image/create')
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image/create
+HTTP_REFERER=http://localhost/~lstilo/wipsea/index.php?r=image/create
+---
+2014/06/23 08:22:30 [error] [exception.CException] exception 'CException' with message 'Property "Image.img_thumb_path" is not defined.' in /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/db/ar/CActiveRecord.php(145): CComponent->__get('img_thumb_path')
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/validators/CRequiredValidator.php(58): CActiveRecord->__get('img_thumb_path')
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/validators/CValidator.php(213): CRequiredValidator->validateAttribute(Object(Image), 'img_thumb_path')
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CModel.php(159): CValidator->validate(Object(Image), NULL)
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/db/ar/CActiveRecord.php(805): CModel->validate(NULL)
+#5 /Users/lstilo/Sites0/wipsea/protected/controllers/ImageController.php(100): CActiveRecord->save()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionCreate()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#14 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('create')
+#16 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('image/create')
+#17 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image/create
+HTTP_REFERER=http://localhost/~lstilo/wipsea/index.php?r=image/create
+---
+2014/06/23 08:28:46 [error] [php] move_uploaded_file(/~lstilo/wipsea/images/upload/2014-06-23-08-28-46-visuel3.jpg): failed to open stream: No such file or directory (/Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CUploadedFile.php:198)
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionCreate()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): ImageController->runAction()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): ImageController->filterAccessControl()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): ImageController->runActionWithFilters()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): ImageController->run()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image/create
+2014/06/23 08:40:16 [error] [php] move_uploaded_file(/~lstilo/wipsea/images/upload/2014-06-23-08-40-16-visuel3.jpg): failed to open stream: No such file or directory (/Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CUploadedFile.php:198)
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionCreate()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): ImageController->runAction()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): ImageController->filterAccessControl()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): ImageController->runActionWithFilters()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): ImageController->run()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image/create
+2014/06/23 08:40:56 [error] [php] move_uploaded_file(/~lstilo/wipsea/images/upload/2014-06-23-08-40-56-visuel3.jpg): failed to open stream: No such file or directory (/Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CUploadedFile.php:198)
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionCreate()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): ImageController->runAction()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): ImageController->filterAccessControl()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): ImageController->runActionWithFilters()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): ImageController->run()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image/create
+2014/06/23 08:41:13 [error] [php] move_uploaded_file(/~lstilo/wipsea/images/upload/2014-06-23-08-41-13-visuel4.jpg): failed to open stream: No such file or directory (/Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CUploadedFile.php:198)
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionCreate()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): ImageController->runAction()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): ImageController->filterAccessControl()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): ImageController->runActionWithFilters()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): ImageController->run()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image/create
+2014/06/23 08:42:30 [error] [php] move_uploaded_file(/~lstilo/wipsea/images/upload/2014-06-23-08-42-30-visuel4.jpg): failed to open stream: No such file or directory (/Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CUploadedFile.php:198)
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionCreate()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): ImageController->runAction()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): ImageController->filterAccessControl()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): ImageController->runActionWithFilters()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): ImageController->run()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image/create
+2014/06/23 08:42:37 [error] [php] move_uploaded_file(/~lstilo/wipsea/images/upload/2014-06-23-08-42-37-visuel4.jpg): failed to open stream: No such file or directory (/Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CUploadedFile.php:198)
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionCreate()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): ImageController->runAction()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): ImageController->filterAccessControl()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): ImageController->runActionWithFilters()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): ImageController->run()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image/create
+2014/06/23 08:42:42 [error] [php] move_uploaded_file(/~lstilo/wipsea/images/upload/2014-06-23-08-42-42-visuel4.jpg): failed to open stream: No such file or directory (/Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CUploadedFile.php:198)
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionCreate()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): ImageController->runAction()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): ImageController->filterAccessControl()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): ImageController->runActionWithFilters()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): ImageController->run()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image/create
+2014/06/23 08:45:58 [error] [php] move_uploaded_file(/~lstilo/wipsea/images/upload/2014-06-23-08-45-58-visuel3.jpg): failed to open stream: No such file or directory (/Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CUploadedFile.php:198)
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionCreate()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): ImageController->runAction()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): ImageController->filterAccessControl()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): ImageController->runActionWithFilters()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): ImageController->run()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image/create
+2014/06/23 08:52:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "demo".' in /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php:483
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(270): CController->missingAction('demo')
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('demo')
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('image/demo')
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image/demo
+HTTP_REFERER=http://localhost/~lstilo/wipsea/index.php?r=image/view&id=10
+---
+2014/06/23 08:53:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "demo".' in /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php:483
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(270): CController->missingAction('demo')
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('demo')
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('image/demo')
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image/demo
+HTTP_REFERER=http://localhost/~lstilo/wipsea/index.php?r=image/view&id=10
+---
+2014/06/23 08:53:35 [error] [exception.CException] exception 'CException' with message 'Property "Image.img_thumb_path" is not defined.' in /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/db/ar/CActiveRecord.php(145): CComponent->__get('img_thumb_path')
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/helpers/CHtml.php(2529): CActiveRecord->__get('img_thumb_path')
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/helpers/CHtml.php(2252): CHtml::resolveValue(Object(Image), 'img_thumb_path')
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/helpers/CHtml.php(1434): CHtml::activeInputField('text', Object(Image), 'img_thumb_path', Array)
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/widgets/CActiveForm.php(725): CHtml::activeTextField(Object(Image), 'img_thumb_path', Array)
+#5 /Users/lstilo/Sites0/wipsea/protected/views/image/_search.php(46): CActiveForm->textField(Object(Image), 'img_thumb_path', Array)
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require('/Users/lstilo/S...')
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/lstilo/S...', Array, true)
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(869): CBaseController->renderFile('/Users/lstilo/S...', Array, true)
+#9 /Users/lstilo/Sites0/wipsea/protected/views/image/admin.php(40): CController->renderPartial('_search', Array)
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require('/Users/lstilo/S...')
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/lstilo/S...', Array, true)
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(869): CBaseController->renderFile('/Users/lstilo/S...', Array, true)
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#14 /Users/lstilo/Sites0/wipsea/protected/controllers/ImageController.php(191): CController->render('admin', Array)
+#15 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionAdmin()
+#16 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#23 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('admin')
+#25 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('image/admin')
+#26 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#27 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image/admin
+---
+2014/06/23 08:58:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "demo".' in /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php:483
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(270): CController->missingAction('demo')
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('demo')
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('image/demo')
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image/demo
+HTTP_REFERER=http://localhost/~lstilo/wipsea/index.php?r=image/view&id=10
+---
+2014/06/23 09:56:31 [error] [php] Undefined variable: data (/Users/lstilo/Sites0/wipsea/protected/views/image/view.php:37)
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(869): ImageController->renderFile()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(782): ImageController->renderPartial()
+#2 /Users/lstilo/Sites0/wipsea/protected/controllers/ImageController.php(61): ImageController->render()
+#3 unknown(0): ImageController->actionView()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): ImageController->runAction()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): ImageController->filterAccessControl()
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): ImageController->runActionWithFilters()
+#14 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): ImageController->run()
+#15 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image/view&id=1
+2014/06/23 10:00:35 [error] [exception.Exception] exception 'Exception' in /Users/lstilo/Sites0/wipsea/protected/components/ImageHelper.php:33
+Stack trace:
+#0 /Users/lstilo/Sites0/wipsea/protected/views/image/view.php(36): ImageHelper::thumb(40, 40, 'images/upload/2...', Array)
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require('/Users/lstilo/S...')
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/lstilo/S...', Array, true)
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(869): CBaseController->renderFile('/Users/lstilo/S...', Array, true)
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#5 /Users/lstilo/Sites0/wipsea/protected/controllers/ImageController.php(61): CController->render('view', Array)
+#6 [internal function]: ImageController->actionView('1')
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ImageController), Array)
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ImageController), Object(ReflectionMethod), Array)
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#16 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('view')
+#18 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('image/view')
+#19 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#20 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image/view&id=1
+HTTP_REFERER=http://localhost/~lstilo/wipsea/index.php?r=image/view&id=1
+---
+2014/06/23 10:14:16 [error] [exception.Exception] exception 'Exception' in /Users/lstilo/Sites0/wipsea/protected/components/ImageHelper.php:33
+Stack trace:
+#0 /Users/lstilo/Sites0/wipsea/protected/views/image/_view.php(36): ImageHelper::thumb(40, 40, 'images/upload/i...', Array)
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(130): require('/Users/lstilo/S...')
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/lstilo/S...', Array, false)
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CListView.php(291): CBaseController->renderFile('/Users/lstilo/S...', Array)
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CBaseListView.php(167): CListView->renderItems()
+#5 [internal function]: CBaseListView->renderSection(Array)
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CBaseListView.php(150): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CBaseListView.php(135): CBaseListView->renderContent()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(173): CBaseListView->run()
+#9 /Users/lstilo/Sites0/wipsea/protected/views/image/list.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require('/Users/lstilo/S...')
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/lstilo/S...', Array, true)
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(869): CBaseController->renderFile('/Users/lstilo/S...', Array, true)
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(782): CController->renderPartial('list', Array, true)
+#14 /Users/lstilo/Sites0/wipsea/protected/controllers/ImageController.php(170): CController->render('list', Array)
+#15 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionList()
+#16 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#23 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('list')
+#25 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('image/list')
+#26 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#27 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image/list
+HTTP_REFERER=http://localhost/~lstilo/wipsea/index.php?r=image/view&id=15
+---
+2014/06/23 10:16:17 [error] [exception.Exception] exception 'Exception' in /Users/lstilo/Sites0/wipsea/protected/components/ImageHelper.php:33
+Stack trace:
+#0 /Users/lstilo/Sites0/wipsea/protected/views/image/_view.php(37): ImageHelper::thumb(40, 40, 'images/upload/2...', Array)
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(130): require('/Users/lstilo/S...')
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/lstilo/S...', Array, false)
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CListView.php(291): CBaseController->renderFile('/Users/lstilo/S...', Array)
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CBaseListView.php(167): CListView->renderItems()
+#5 [internal function]: CBaseListView->renderSection(Array)
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CBaseListView.php(150): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CBaseListView.php(135): CBaseListView->renderContent()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(173): CBaseListView->run()
+#9 /Users/lstilo/Sites0/wipsea/protected/views/image/list.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require('/Users/lstilo/S...')
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/lstilo/S...', Array, true)
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(869): CBaseController->renderFile('/Users/lstilo/S...', Array, true)
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(782): CController->renderPartial('list', Array, true)
+#14 /Users/lstilo/Sites0/wipsea/protected/controllers/ImageController.php(170): CController->render('list', Array)
+#15 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionList()
+#16 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#23 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('list')
+#25 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('image/list')
+#26 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#27 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image/list
+HTTP_REFERER=http://localhost/~lstilo/wipsea/index.php?r=image/view&id=15
+---

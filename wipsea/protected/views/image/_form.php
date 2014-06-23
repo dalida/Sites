@@ -50,54 +50,6 @@
 		<?php echo $form->error($model,'image'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'img_path'); ?>
-		<?php echo $form->textField($model,'img_path',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'img_path'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'img_thumb_path'); ?>
-		<?php echo $form->textField($model,'img_thumb_path',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'img_thumb_path'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'type'); ?>
-		<?php echo $form->textField($model,'type'); ?>
-		<?php echo $form->error($model,'type'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'processed'); ?>
-		<?php echo $form->textField($model,'processed'); ?>
-		<?php echo $form->error($model,'processed'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'valid'); ?>
-		<?php echo $form->textField($model,'valid'); ?>
-		<?php echo $form->error($model,'valid'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'created_by'); ?>
-		<?php echo $form->textField($model,'created_by'); ?>
-		<?php echo $form->error($model,'created_by'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'created'); ?>
-		<?php echo $form->textField($model,'created'); ?>
-		<?php echo $form->error($model,'created'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'last_update'); ?>
-		<?php echo $form->textField($model,'last_update'); ?>
-		<?php echo $form->error($model,'last_update'); ?>
-	</div>
-
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

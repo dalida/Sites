@@ -145,6 +145,33 @@ div.view
 	border: 1px solid #C9E0ED;
 }
 
+div.thumbview
+{
+	padding: 10px;
+	margin: 10px 0;
+}
+
+div.workspace div.summary
+{
+    text-align: center;
+}
+
+div.workspace div.pager
+{
+    font-size: 0%;
+}
+
+div.workspace ul.yiiPager
+{
+    float: left;
+}
+
+div.workspace
+{
+    font-size: 75%;
+    text-align: center;
+}
+
 div.breadcrumbs
 {
 	font-size: 0.9em;

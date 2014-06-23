@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Image', 'url'=>array('index')),
+	array('label'=>'List Image', 'url'=>array('list')),
 	array('label'=>'Create Image', 'url'=>array('create')),
 	array('label'=>'Update Image', 'url'=>array('update', 'id'=>$model->id)),
 	array('label'=>'Delete Image', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Image', 'url'=>array('demo')),
+	array('label'=>'Manage Image', 'url'=>array('admin')),
 //    array('label'=>'image', 'type'=>'raw', 'value'=>CHtml::image(Yii:app()->baseUrl.'/images/'.$model->image),),
 );
 ?>
@@ -27,8 +27,16 @@ $this->menu=array(
 		'longitude',
 		'latitude',
 		'altitude',
-		'img_path',
-		'img_thumb_path',
+	    array(
+            'label'=>'Image',
+            'type'=>'raw',
+            'value'=>
+                CHtml::image(
+                    ImageHelper::thumb(40, 40, 'images/upload/1402394672visuel6.jpg', array('method'=>'adaptiveResize'))
+                ), 
+                array('id'=>$model->id),
+        ),
+     	'img_path',
 		'type',
 		'processed',
 		'valid',
