@@ -1,6 +1,6 @@
 <?php
 
-class ImageController extends Controller
+class WildlifeController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -9,7 +9,7 @@ class ImageController extends Controller
 	public $layout='//layouts/column2';
 
     const IMAGE_PATH = '/images/upload/';
-    const IMAGE_TYPE = 'background';
+    const IMAGE_TYPE = 'wildlife';
 
 	/**
 	 * @return array action filters
@@ -72,6 +72,7 @@ class ImageController extends Controller
 
 		if(isset($_POST['Image']))
 		{
+            echo "test2";
 			$model->attributes=$_POST['Image'];
             date_default_timezone_set('America/New_York');
             $datetime = date('Y-m-d-H-i-s');
@@ -107,7 +108,7 @@ class ImageController extends Controller
 	}
 
 	/**
-     * @TODO LM update file changes
+     * @TODO LM update with image attributes
 	 * Updates a particular model.
 	 * If update is successful, the browser will be redirected to the 'view' page.
 	 * @param integer $id the ID of the model to be updated
@@ -156,26 +157,23 @@ class ImageController extends Controller
             ),
         ));
 
-        //processed images
-		$procDataProvider=new CActiveDataProvider('Image', array(
+        //validated wildlife
+		$valDataProvider=new CActiveDataProvider('Image', array(
             'criteria'=>array(
-//                'condition'=>"type='".self::IMAGE_TYPE."'",
                 'condition'=>"type='".self::IMAGE_TYPE."' AND processed=1",
             ),
         ));
 
-        //processed images
-		$notProcDataProvider=new CActiveDataProvider('Image', array(
+        //unvalidated wildlife
+		$notValDataProvider=new CActiveDataProvider('Image', array(
             'criteria'=>array(
-//                'condition'=>"type='".self::IMAGE_TYPE."'",
                 'condition'=>"type='".self::IMAGE_TYPE."' AND processed=0",
             ),
         ));
-
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
-			'procDataProvider'=>$procDataProvider,
-			'notProcDataProvider'=>$notProcDataProvider,
+			'valDataProvider'=>$valDataProvider,
+			'notValDataProvider'=>$notValDataProvider,
 		));
 	}
 
@@ -184,7 +182,6 @@ class ImageController extends Controller
 	 */
 	public function actionList()
 	{
-//		$dataProvider=new CActiveDataProvider('Image');
 		$dataProvider=new CActiveDataProvider('Image', array(
             'criteria'=>array(
                 'condition'=>"type='".self::IMAGE_TYPE."'",

@@ -45,7 +45,8 @@ $(document).ready(function() {
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
 				array('label'=>'Images', 'url'=>array('/image', 'view'=>'index')),
-				array('label'=>'Wildlife', 'url'=>array('/site/page', 'view'=>'wildlife')),
+				array('label'=>'Wildlife', 'url'=>array('/wildlife', 'view'=>'index')),
+				//array('label'=>'Wildlife', 'url'=>array('/site/page', 'view'=>'wildlife')),
 				array('label'=>'Map', 'url'=>array('/site/page', 'view'=>'map')),
 				array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),

@@ -2600,3 +2600,581 @@ Stack trace:
 #14 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
 #15 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
 REQUEST_URI=/~lstilo/wipsea/index.php?r=image&view=index
+2014/06/23 15:12:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "wildlife".' in /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('wildlife')
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=wildlife
+---
+2014/06/23 15:15:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "wildlife".' in /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('wildlife')
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=wildlife&view=index
+---
+2014/06/23 15:15:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "wildlife".' in /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('wildlife')
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=wildlife
+---
+2014/06/23 15:18:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "wildlife".' in /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('wildlife')
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=wildlife
+---
+2014/06/23 15:18:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "wildlife".' in /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('wildlife')
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=wildlife
+---
+2014/06/23 17:48:29 [error] [exception.CDbException] exception 'CDbException' with message 'Table "image" does not have a column named "status".' in /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/db/schema/CDbCommandBuilder.php:694
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/db/ar/CActiveRecord.php(1518): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 /Users/lstilo/Sites0/wipsea/protected/controllers/ImageController.php(156): CActiveRecord->findByAttributes(Array)
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionIndex()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('')
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('image')
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image&view=index
+HTTP_REFERER=http://localhost/~lstilo/wipsea/index.php?r=site/page&view=wildlife
+---
+2014/06/23 17:48:46 [error] [exception.CException] exception 'CException' with message 'Property "Image.findByAttributes" is not defined.' in /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/db/ar/CActiveRecord.php(145): CComponent->__get('findByAttribute...')
+#1 /Users/lstilo/Sites0/wipsea/protected/controllers/ImageController.php(159): CActiveRecord->__get('findByAttribute...')
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionIndex()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('')
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('image')
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image&view=index
+HTTP_REFERER=http://localhost/~lstilo/wipsea/index.php?r=site/page&view=wildlife
+---
+2014/06/23 17:49:35 [error] [exception.CException] exception 'CException' with message 'Image and its behaviors do not have a method or closure named "getData".' in /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CComponent.php:266
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/db/ar/CActiveRecord.php(227): CComponent->__call('getData', Array)
+#1 /Users/lstilo/Sites0/wipsea/protected/views/image/index.php(9): CActiveRecord->__call('getData', Array)
+#2 /Users/lstilo/Sites0/wipsea/protected/views/image/index.php(9): Image->getData()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require('/Users/lstilo/S...')
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/lstilo/S...', Array, true)
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(869): CBaseController->renderFile('/Users/lstilo/S...', Array, true)
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#7 /Users/lstilo/Sites0/wipsea/protected/controllers/ImageController.php(159): CController->render('index', Array)
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionIndex()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#16 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('')
+#18 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('image')
+#19 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#20 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image&view=index
+HTTP_REFERER=http://localhost/~lstilo/wipsea/index.php?r=site/page&view=wildlife
+---
+2014/06/23 17:55:43 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'background' in 'where clause'. The SQL statement executed was: SELECT COUNT(*) FROM `image` `t` WHERE type=background.
+2014/06/23 17:55:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'background' in 'where clause'' in /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/db/CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/db/ar/CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 /Users/lstilo/Sites0/wipsea/protected/views/image/index.php(9): CDataProvider->getData()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require('/Users/lstilo/S...')
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/lstilo/S...', Array, true)
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(869): CBaseController->renderFile('/Users/lstilo/S...', Array, true)
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#11 /Users/lstilo/Sites0/wipsea/protected/controllers/ImageController.php(161): CController->render('index', Array)
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionIndex()
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#14 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#20 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('')
+#22 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('image')
+#23 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#24 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image&view=index
+HTTP_REFERER=http://localhost/~lstilo/wipsea/index.php?r=site/page&view=wildlife
+---
+2014/06/23 18:06:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "wildlife".' in /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('wildlife')
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=wildlife
+---
+2014/06/23 18:09:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "wildlife".' in /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('wildlife')
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=wildlife
+---
+2014/06/23 18:09:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "wildlife/index".' in /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('wildlife/index')
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=wildlife/index
+---
+2014/06/23 18:12:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "wildlife".' in /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('wildlife')
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=wildlife
+---
+2014/06/23 18:16:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "wildlife".' in /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('wildlife')
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=wildlife&view=index
+---
+2014/06/23 18:17:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "wildlife".' in /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('wildlife')
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=wildlife&view=index
+---
+2014/06/23 18:17:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "wildlife".' in /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('wildlife')
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/lstilo/Sites0/wipsea/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~lstilo/wipsea/index.php?r=wildlife
+---
+2014/06/23 18:51:14 [error] [php] Object of class CListView could not be converted to string (/Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/jui/CJuiTabs.php:128)
+Stack trace:
+#0 /Users/lstilo/Sites0/wipsea/protected/views/image/index.php(50): ImageController->widget()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require()
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): ImageController->renderInternal()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(869): ImageController->renderFile()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(782): ImageController->renderPartial()
+#5 /Users/lstilo/Sites0/wipsea/protected/controllers/ImageController.php(177): ImageController->render()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionIndex()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): ImageController->runAction()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): ImageController->filterAccessControl()
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#14 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): ImageController->runActionWithFilters()
+#15 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): ImageController->run()
+#16 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image/index
+2014/06/23 18:58:29 [error] [php] Object of class CListView could not be converted to string (/Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/jui/CJuiTabs.php:128)
+Stack trace:
+#0 /Users/lstilo/Sites0/wipsea/protected/views/image/index.php(50): ImageController->widget()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require()
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): ImageController->renderInternal()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(869): ImageController->renderFile()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(782): ImageController->renderPartial()
+#5 /Users/lstilo/Sites0/wipsea/protected/controllers/ImageController.php(177): ImageController->render()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionIndex()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): ImageController->runAction()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): ImageController->filterAccessControl()
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#14 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): ImageController->runActionWithFilters()
+#15 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): ImageController->run()
+#16 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image/index
+2014/06/23 19:29:36 [error] [php] Object of class CListView could not be converted to string (/Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/jui/CJuiTabs.php:128)
+Stack trace:
+#0 /Users/lstilo/Sites0/wipsea/protected/views/image/index.php(56): ImageController->widget()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require()
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): ImageController->renderInternal()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(869): ImageController->renderFile()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(782): ImageController->renderPartial()
+#5 /Users/lstilo/Sites0/wipsea/protected/controllers/ImageController.php(179): ImageController->render()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ImageController->actionIndex()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): ImageController->runAction()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): ImageController->filterAccessControl()
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#14 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): ImageController->runActionWithFilters()
+#15 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): ImageController->run()
+#16 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=image/index
+2014/06/23 19:40:30 [error] [php] Undefined variable: valDataProvider (/Users/lstilo/Sites0/wipsea/protected/views/wildlife/index.php:44)
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(869): WildlifeController->renderFile()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(782): WildlifeController->renderPartial()
+#2 /Users/lstilo/Sites0/wipsea/protected/controllers/WildlifeController.php(178): WildlifeController->render()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): WildlifeController->actionIndex()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): WildlifeController->runAction()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): WildlifeController->filterAccessControl()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): WildlifeController->runActionWithFilters()
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): WildlifeController->run()
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=wildlife&view=index
+2014/06/23 19:40:56 [error] [php] Undefined variable: valDataProvider (/Users/lstilo/Sites0/wipsea/protected/views/wildlife/index.php:44)
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(869): WildlifeController->renderFile()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(782): WildlifeController->renderPartial()
+#2 /Users/lstilo/Sites0/wipsea/protected/controllers/WildlifeController.php(178): WildlifeController->render()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): WildlifeController->actionIndex()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): WildlifeController->runAction()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): WildlifeController->filterAccessControl()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): WildlifeController->runActionWithFilters()
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): WildlifeController->run()
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=wildlife&view=index
+2014/06/23 19:41:33 [error] [php] Undefined variable: valDataProvider (/Users/lstilo/Sites0/wipsea/protected/views/wildlife/index.php:44)
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(869): WildlifeController->renderFile()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(782): WildlifeController->renderPartial()
+#2 /Users/lstilo/Sites0/wipsea/protected/controllers/WildlifeController.php(180): WildlifeController->render()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): WildlifeController->actionIndex()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): WildlifeController->runAction()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): WildlifeController->filterAccessControl()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): WildlifeController->runActionWithFilters()
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): WildlifeController->run()
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=wildlife&view=index
+2014/06/23 19:42:26 [error] [php] Undefined variable: valDataProvider (/Users/lstilo/Sites0/wipsea/protected/views/wildlife/index.php:44)
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(869): WildlifeController->renderFile()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(782): WildlifeController->renderPartial()
+#2 /Users/lstilo/Sites0/wipsea/protected/controllers/WildlifeController.php(180): WildlifeController->render()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): WildlifeController->actionIndex()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): WildlifeController->runAction()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): WildlifeController->filterAccessControl()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): WildlifeController->runActionWithFilters()
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): WildlifeController->run()
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=wildlife&view=index
+2014/06/23 19:42:30 [error] [php] Undefined variable: valDataProvider (/Users/lstilo/Sites0/wipsea/protected/views/wildlife/index.php:44)
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(869): WildlifeController->renderFile()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(782): WildlifeController->renderPartial()
+#2 /Users/lstilo/Sites0/wipsea/protected/controllers/WildlifeController.php(180): WildlifeController->render()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): WildlifeController->actionIndex()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): WildlifeController->runAction()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): WildlifeController->filterAccessControl()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): WildlifeController->runActionWithFilters()
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): WildlifeController->run()
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=wildlife&view=index
+2014/06/23 19:43:36 [error] [php] require(): Filename cannot be empty (/Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php:130)
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CListView.php(291): WildlifeController->renderFile()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CBaseListView.php(167): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CBaseListView.php(150): preg_replace_callback()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CBaseListView.php(135): CListView->renderContent()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(167): CListView->run()
+#6 /Users/lstilo/Sites0/wipsea/protected/views/wildlife/index.php(46): WildlifeController->widget()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): WildlifeController->renderInternal()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(869): WildlifeController->renderFile()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(782): WildlifeController->renderPartial()
+#11 /Users/lstilo/Sites0/wipsea/protected/controllers/WildlifeController.php(180): WildlifeController->render()
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): WildlifeController->actionIndex()
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): WildlifeController->runAction()
+#15 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): WildlifeController->filterAccessControl()
+#18 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#20 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): WildlifeController->runActionWithFilters()
+#21 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): WildlifeController->run()
+#22 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#24 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=wildlife&view=index
+2014/06/23 19:46:08 [error] [php] require(): Filename cannot be empty (/Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php:130)
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CListView.php(291): WildlifeController->renderFile()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CBaseListView.php(167): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CBaseListView.php(150): preg_replace_callback()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CBaseListView.php(135): CListView->renderContent()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(167): CListView->run()
+#6 /Users/lstilo/Sites0/wipsea/protected/views/wildlife/index.php(46): WildlifeController->widget()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): WildlifeController->renderInternal()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(869): WildlifeController->renderFile()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(782): WildlifeController->renderPartial()
+#11 /Users/lstilo/Sites0/wipsea/protected/controllers/WildlifeController.php(180): WildlifeController->render()
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): WildlifeController->actionIndex()
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): WildlifeController->runAction()
+#15 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): WildlifeController->filterAccessControl()
+#18 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#20 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): WildlifeController->runActionWithFilters()
+#21 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): WildlifeController->run()
+#22 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#24 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=wildlife&view=index
+2014/06/23 19:49:04 [error] [php] require(): Filename cannot be empty (/Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php:130)
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CListView.php(291): WildlifeController->renderFile()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CBaseListView.php(167): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CBaseListView.php(150): preg_replace_callback()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CBaseListView.php(135): CListView->renderContent()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(167): CListView->run()
+#6 /Users/lstilo/Sites0/wipsea/protected/views/wildlife/index.php(47): WildlifeController->widget()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): WildlifeController->renderInternal()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(869): WildlifeController->renderFile()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(782): WildlifeController->renderPartial()
+#11 /Users/lstilo/Sites0/wipsea/protected/controllers/WildlifeController.php(180): WildlifeController->render()
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): WildlifeController->actionIndex()
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): WildlifeController->runAction()
+#15 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): WildlifeController->filterAccessControl()
+#18 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#20 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): WildlifeController->runActionWithFilters()
+#21 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): WildlifeController->run()
+#22 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#24 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=wildlife&view=index
+2014/06/23 19:49:24 [error] [php] require(): Filename cannot be empty (/Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php:130)
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CListView.php(291): WildlifeController->renderFile()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CBaseListView.php(167): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CBaseListView.php(150): preg_replace_callback()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CBaseListView.php(135): CListView->renderContent()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(167): CListView->run()
+#6 /Users/lstilo/Sites0/wipsea/protected/views/wildlife/index.php(52): WildlifeController->widget()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): WildlifeController->renderInternal()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(869): WildlifeController->renderFile()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(782): WildlifeController->renderPartial()
+#11 /Users/lstilo/Sites0/wipsea/protected/controllers/WildlifeController.php(180): WildlifeController->render()
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): WildlifeController->actionIndex()
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): WildlifeController->runAction()
+#15 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): WildlifeController->filterAccessControl()
+#18 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#20 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): WildlifeController->runActionWithFilters()
+#21 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): WildlifeController->run()
+#22 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#24 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=wildlife&view=index
+2014/06/23 19:51:41 [error] [php] Undefined variable: valDataProvider (/Users/lstilo/Sites0/wipsea/protected/controllers/WildlifeController.php:154)
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): WildlifeController->runAction()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): WildlifeController->filterAccessControl()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): WildlifeController->runActionWithFilters()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): WildlifeController->run()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=wildlife&view=index
+2014/06/23 19:54:38 [error] [php] require(): Filename cannot be empty (/Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php:130)
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CListView.php(291): WildlifeController->renderFile()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CBaseListView.php(167): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CBaseListView.php(150): preg_replace_callback()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CBaseListView.php(135): CListView->renderContent()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(167): CListView->run()
+#6 /Users/lstilo/Sites0/wipsea/protected/views/wildlife/index.php(52): WildlifeController->widget()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): WildlifeController->renderInternal()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(869): WildlifeController->renderFile()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(782): WildlifeController->renderPartial()
+#11 /Users/lstilo/Sites0/wipsea/protected/controllers/WildlifeController.php(182): WildlifeController->render()
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): WildlifeController->actionIndex()
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): WildlifeController->runAction()
+#15 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): WildlifeController->filterAccessControl()
+#18 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#20 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): WildlifeController->runActionWithFilters()
+#21 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): WildlifeController->run()
+#22 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#24 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=wildlife&view=index
+2014/06/23 19:57:34 [error] [php] Undefined variable: notValDataProvider (/Users/lstilo/Sites0/wipsea/protected/views/wildlife/index.php:50)
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(869): WildlifeController->renderFile()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(782): WildlifeController->renderPartial()
+#2 /Users/lstilo/Sites0/wipsea/protected/controllers/WildlifeController.php(179): WildlifeController->render()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): WildlifeController->actionIndex()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): WildlifeController->runAction()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): WildlifeController->filterAccessControl()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): WildlifeController->runActionWithFilters()
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): WildlifeController->run()
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=wildlife&view=index
+2014/06/23 19:59:14 [error] [php] require(): Filename cannot be empty (/Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php:130)
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CListView.php(291): WildlifeController->renderFile()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CBaseListView.php(167): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CBaseListView.php(150): preg_replace_callback()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/zii/widgets/CBaseListView.php(135): CListView->renderContent()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(167): CListView->run()
+#6 /Users/lstilo/Sites0/wipsea/protected/views/wildlife/index.php(47): WildlifeController->widget()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): WildlifeController->renderInternal()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(869): WildlifeController->renderFile()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(782): WildlifeController->renderPartial()
+#11 /Users/lstilo/Sites0/wipsea/protected/controllers/WildlifeController.php(179): WildlifeController->render()
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): WildlifeController->actionIndex()
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): WildlifeController->runAction()
+#15 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): WildlifeController->filterAccessControl()
+#18 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#20 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): WildlifeController->runActionWithFilters()
+#21 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): WildlifeController->run()
+#22 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#24 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=wildlife&view=index
+2014/06/23 20:03:29 [error] [php] Undefined variable: notValDataProvider (/Users/lstilo/Sites0/wipsea/protected/views/wildlife/index.php:50)
+Stack trace:
+#0 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(869): WildlifeController->renderFile()
+#1 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(782): WildlifeController->renderPartial()
+#2 /Users/lstilo/Sites0/wipsea/protected/controllers/WildlifeController.php(179): WildlifeController->render()
+#3 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): WildlifeController->actionIndex()
+#4 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): WildlifeController->runAction()
+#6 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): WildlifeController->filterAccessControl()
+#9 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CController.php(265): WildlifeController->runActionWithFilters()
+#12 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): WildlifeController->run()
+#13 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Users/lstilo/Sites0/yii/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Users/lstilo/Sites0/wipsea/index.php(13): CWebApplication->run()
+REQUEST_URI=/~lstilo/wipsea/index.php?r=wildlife&view=index

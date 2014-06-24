@@ -3,13 +3,13 @@
 
 $this->pageTitle=Yii::app()->name . ' - Images';
 $this->breadcrumbs=array(
-	'Images',
+	'Wildlife',
 );
 
 $models=$dataProvider->getData();
 ?>
 
-<h1>Images</h1>
+<h1>Wildlife</h1>
 
 <div class="imagesBody">
 <div class="imagesContainer">
@@ -41,16 +41,18 @@ $models=$dataProvider->getData();
         $models[0]->name=>array('content'=>Chtml::image($models[0]->img_path, null, array('class'=>'imagesTab')),
         'id'=>'tab1',
         ),
-        'Processed'=>array('content'=>$this->widget('zii.widgets.CListView', array(
-            'dataProvider'=>$procDataProvider,
-            'itemView'=>'_procView',
-        ),true),
-        'id'=>'tab2'),
-        'Not Processed'=>array('content'=>$this->widget('zii.widgets.CListView', array(
-            'dataProvider'=>$notProcDataProvider,
+//        'Validated'=>array('content'=>$this->widget('zii.widgets.CListView', array(
+//            'dataProvider'=>$valDataProvider,
+//            'itemView'=>'_procView',
+//        ),true),
+//        'id'=>'tab2'),
+        'Not Validated'=>array('content'=>$this->widget('zii.widgets.CListView', array(
+            'dataProvider'=>$notValDataProvider,
             'itemView'=>'_procView',
         ),true),
         'id'=>'tab3'),
+//        'Validated'=>array('content'=>'Content for tab 2', 'id'=>'tab2'),
+//        'Not Validated'=>array('content'=>'Content for tab 3', 'id'=>'tab3'),
     ), // end tabs array
 ));
 ?>
@@ -59,12 +61,12 @@ $models=$dataProvider->getData();
 
   <div class="sidebar2">
     <div id="title_image">
-      <h4>Image 1    </h4>
+      <h4>Wildlife 1    </h4>
     </div>
     <div id="image_caract">
       <table width="88%" align="center">
         <tr>
-          <th scope="row"><div align="right">Image:</div></th>
+          <th scope="row"><div align="right">Wildlife:</div></th>
     <td><div align="left"><?php echo $models[0]->name ?></div></td>
         </tr>
         <tr>
@@ -80,26 +82,14 @@ $models=$dataProvider->getData();
           <td><div align="left"><?php echo $models[0]->altitude ?></div></td>
         </tr>
         <tr>
-          <th scope="row"><div align="right">Wildlife:</div></th>
-          <td align="left">
-            <select class="TabbedPanelsTabGroup">
-              <option value="baleine">Baleine</option>
-              <option value="dauphin">Dauphin</option>
-              <option value="poisson">Poisson</option>
-              <option value="requin">Requin</option>
-              <option value="tortue">Tortue</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row"><div align="right">Processed:</div></th>
+          <th scope="row"><div align="right">Validated:</div></th>
           <td><div align="left">Yes</div></td>
         </tr>
       </table>
        <p>&nbsp;</p>
       <ul class="nav">
       <li><a href="#">Modify</a></li>
-      <li><a href="#">Process</a></li>
+      <li><a href="#">Validate</a></li>
     </ul>
 
      
@@ -108,8 +98,8 @@ $models=$dataProvider->getData();
       <div id="sidebar2_down">
         <p>&nbsp;</p>
         <ul class="nav">
-          <li><a href="#">Select All Images</a></li>
-          <li><a href="#">Process All Selected</a>    </li>
+          <li><a href="#">Select All Wildlife</a></li>
+          <li><a href="#">Validate All Selected</a>    </li>
         </ul>
       <p>&nbsp;</p>
       </div>
