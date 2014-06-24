@@ -167,6 +167,11 @@ div.thumbview
 	margin: 10px 0;
 }
 
+div.procview{
+    position: relative
+    float: left;
+}
+
 div.workspace div.pager
 {
     font-size: 0%;
