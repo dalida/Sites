@@ -41,20 +41,6 @@ CREATE INDEX `idx_username` ON `wipsea`.`person` (`username` ASC);
 
 
 -- -----------------------------------------------------
--- Table `wipsea`.`image_type`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `wipsea`.`image_type` ;
-
-CREATE TABLE IF NOT EXISTS `wipsea`.`image_type` (
-  `type` VARCHAR(128) NOT NULL COMMENT 'image types :' /* comment truncated */ /*- background
-- wildlife
-*/,
-  PRIMARY KEY (`type`))
-ENGINE = InnoDB
-COMMENT = 'Queue to process images.';
-
-
--- -----------------------------------------------------
 -- Table `wipsea`.`image`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `wipsea`.`image` ;
@@ -73,17 +59,10 @@ CREATE TABLE IF NOT EXISTS `wipsea`.`image` (
   `created_by` VARCHAR(128) NOT NULL COMMENT 'Person who uploaded image.',
   `created` DATETIME NOT NULL,
   `last_update` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  CONSTRAINT `fk_image_type`
-    FOREIGN KEY (`type`)
-    REFERENCES `wipsea`.`image_type` (`type`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
-COMMENT = 'Images that can be of either type background scene, or wildl' /* comment truncated */ /*ife object.*/;
-
-CREATE INDEX `fk_image_type_idx` ON `wipsea`.`image` (`type` ASC);
+COMMENT = 'Images can be either type background, or wildlife.';
 
 
 -- -----------------------------------------------------
@@ -103,6 +82,20 @@ CREATE TABLE IF NOT EXISTS `wipsea`.`image_queue` (
     REFERENCES `wipsea`.`image` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
+ENGINE = InnoDB
+COMMENT = 'Queue to process images.';
+
+
+-- -----------------------------------------------------
+-- Table `wipsea`.`image_type`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `wipsea`.`image_type` ;
+
+CREATE TABLE IF NOT EXISTS `wipsea`.`image_type` (
+  `type` VARCHAR(128) NOT NULL COMMENT 'image types :' /* comment truncated */ /*- background
+- wildlife
+*/,
+  PRIMARY KEY (`type`))
 ENGINE = InnoDB
 COMMENT = 'Queue to process images.';
 
