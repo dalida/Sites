@@ -86,6 +86,7 @@ $models=$dataProvider->getData();
       </table>
        <p>&nbsp;</p>
       <ul class="nav">
+    <!--@TODO LM update with actions -->
       <li><a href="#">Modify</a></li>
       <li><a href="#">Validate</a></li>
     </ul>

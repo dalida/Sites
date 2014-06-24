@@ -32,7 +32,7 @@ $this->menu=array(
             'type'=>'raw',
             'value'=>
                 CHtml::image(
-                    ImageHelper::thumb(40, 40, 'images/upload/1402394672visuel6.jpg', array('method'=>'adaptiveResize'))
+                    ImageHelper::thumb(40, 40, $model->img_path, array('method'=>'adaptiveResize'))
                 ), 
                 array('id'=>$model->id),
         ),

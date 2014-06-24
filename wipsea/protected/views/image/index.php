@@ -80,6 +80,7 @@ $models=$dataProvider->getData();
           <td><div align="left"><?php echo $models[0]->altitude ?></div></td>
         </tr>
         <tr>
+    <!--@TODO LM get from db -->
           <th scope="row"><div align="right">Wildlife:</div></th>
           <td align="left">
             <select class="TabbedPanelsTabGroup">
@@ -98,6 +99,7 @@ $models=$dataProvider->getData();
       </table>
        <p>&nbsp;</p>
       <ul class="nav">
+    <!--@TODO LM update with actions -->
       <li><a href="#">Modify</a></li>
       <li><a href="#">Process</a></li>
     </ul>
