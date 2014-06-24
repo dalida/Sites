@@ -168,8 +168,9 @@ div.thumbview
 }
 
 div.procview{
-    position: relative
+/*    position: relative
     float: left;
+*/
 }
 
 div.workspace div.pager
